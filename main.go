@@ -6,6 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"mi-equipo.cl/mi-equipo/configs"
 	"mi-equipo.cl/mi-equipo/routes"
+	"mi-equipo.cl/mi-equipo/services"
 )
 
 func init() {
@@ -13,6 +14,8 @@ func init() {
 }
 
 func main() {
+
+	services.ElegirRandom()
 
 	r := gin.Default()
 
@@ -23,5 +26,7 @@ func main() {
 			"message": "Hello world from server Go.",
 		})
 	})
+
 	r.Run()
+
 }
